@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="ajax/bootstrap.min.css">
+    <script type="text/javascript" src="ajax/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="ajax/bootstrap.min.js"></script>
+</head>
+<body style="padding: 100px;">
+<h1 align="center">用户显示页面</h1>
+
+<form class="form-horizontal"  action="#"   method="post">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">查询用户名</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="username">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-3">
+            <button type="submit" class="btn btn-default" align="left">查询</button>
+        </div>
+    </div>
+
+</form>
+
+
+<table border="1" class="table table-striped">
+    <tr>
+        <th>编号</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>头像</th>
+        <th>爱好</th>
+    </tr>
+    <tr th:each="u,s: ${ulist}">
+        <td th:text="${u.id}">Oranges</td>
+        <td th:text="${u.username}">0.99</td>
+        <td th:text="${u.password}">0.99</td>
+        <td th:text="${u.age}">0.99</td>
+        <td th:text="${u.sex}">mm</td>
+        <td th:text="${u.photo}">nn</td>
+        <td th:text="${u.hobby}">nn</td>
+
+        <td>
+
+
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>
